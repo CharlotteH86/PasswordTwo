@@ -23,17 +23,17 @@ public class password {
 				System.out.println("Right Password!");
 				break;
 
-			} else if (inputPassword != password) {
+			} else if (inputPassword != password && attempts < 2) {
 
 				System.out.println("Wrong try again");
 
 			}
-			if (attempts == 2) {
+			attempts++;
+			if (attempts == 3) {
 				System.out.println("Account locked");
 				break;
 
 			}
-			attempts++;
 
 		}
 	}
